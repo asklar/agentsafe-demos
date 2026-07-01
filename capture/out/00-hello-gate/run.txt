@@ -15,4 +15,4 @@
   -> 3 executed, 2 blocked; production.db SURVIVED
 
 Every decision is logged (hash-chained JSONL). Last governed entry:
-  {"ts": 1782890913.767, "tool": "delete_file", "args": {"path": "production.db"}, "effect": "deny", "reason": "no destructive deletes", "source": "deny-delete", "outcome": "blocked", "tags": {}, "prev": "337a33fe66891834cf701dc4e3f61e96d2eec3e26cb4a27bdcff383f79873901", "hash": "cd688d18e93968d59a43d816d96d637c05c8156c6d14d8461d5fbf049c21d4c7"}
+  {"ts": 1782891469.988, "tool": "delete_file", "args": {"path": "production.db"}, "effect": "deny", "reason": "no destructive deletes", "source": "deny-delete", "outcome": "blocked", "tags": {}, "prev": "dbaf42b684444a5c73badea306a40c137dfadb642faa5d68813517d0a970460d", "hash": "ca0d821a80575731a22a3576b9acb843a8a348b27dbf2104527d80274f7d7405"}
