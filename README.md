@@ -83,7 +83,8 @@ agentlab/
 ├── run_tests.py          # dependency-free test runner
 ├── HOWTO.md              # how to add a new demo (the short version)
 ├── CONTRIBUTING.md
-└── LICENSE               # MIT
+└── LICENSE               # Apache-2.0
+├── NOTICE                # Apache-2.0 NOTICE
 ```
 
 ## Adding a demo
@@ -93,4 +94,4 @@ plan and middleware, run it, capture it.
 
 ## License
 
-MIT © Sklar, Inc. See [`LICENSE`](./LICENSE).
+Apache-2.0 licensed — see [`LICENSE`](./LICENSE) and [`NOTICE`](./NOTICE).
