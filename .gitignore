@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Per-demo audit logs are regenerated on each run.
+audit.log.jsonl
+
+# Capture artifacts: keep text logs, ignore heavy media.
+capture/out/**/*.cast
+capture/out/**/*.gif
+capture/out/**/*.svg
+capture/out/**/*.mp4
