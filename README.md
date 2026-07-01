@@ -1,4 +1,4 @@
-# agentlab — a lab for agentic-security demos
+# agentsafe-demos — a lab for agentic-security demos
 
 **A reusable foundation for building small, recordable, open-source demos about
 agent governance.** Every demo is middleware over one tiny tool-call
@@ -8,6 +8,29 @@ becomes shareable content with a single capture command.
 > Autonomous agents are only as safe as the tools they can reach. This lab makes
 > that concrete: it puts a governable seam between an agent and its tools, and
 > shows — side by side — what happens with and without it.
+
+## See it in 10 seconds
+
+A support agent reads a booby-trapped ticket that tells it to mail your Stripe
+key to an attacker. Same agent, same plan, run three ways — a *reasonable*
+allow/deny policy still lets the secret out; a taint tripwire stops it at the
+tool boundary and still lets the legitimate reply through:
+
+```text
+=== POLICY-ONLY agent (allow/deny gate) ===
+  EXEC  read_file   — read credentials  <-- injected step
+  EXEC  http_post   — POST creds off-box  <-- injected exfil
+  -> 6 executed, 0 blocked; !!! SECRET EXFILTRATED
+
+=== TRIPWIRE agent (policy + taint tripwire) ===
+  EXEC  read_file   — read credentials  <-- injected step
+  BLOCK http_post   — POST creds off-box  <-- injected exfil   [taint-tripwire]
+  EXEC  http_post   — reply on the ticket (legit)
+  -> 5 executed, 1 blocked; OK  secret contained
+```
+
+Prompt injection is a *data-flow* problem: track where untrusted data goes, or
+lose. Run it yourself below — ~250 lines, zero dependencies, one command.
 
 ## Why this exists
 
