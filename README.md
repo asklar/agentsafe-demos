@@ -92,6 +92,11 @@ three at once to prove the substrate generalizes;
 Concept B demo — it shows an allow/deny policy is *not enough* to stop a
 prompt-injection exfil, and a taint tripwire is.
 
+> **Standalone primitive.** Concept A also has its own focused home — the
+> **guardrail** repo — the single-idea policy-gate primitive with its own README
+> and quick start, for readers who just want that one control. This lab is where
+> the three concepts compose on a shared shim and become repeatable content.
+
 ## Repo layout
 
 ```
