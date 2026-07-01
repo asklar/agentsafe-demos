@@ -1,5 +1,9 @@
 # agentsafe-demos — a lab for agentic-security demos
 
+[![CI](https://github.com/asklar/agentsafe-demos/actions/workflows/ci.yml/badge.svg)](https://github.com/asklar/agentsafe-demos/actions/workflows/ci.yml)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
+[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-green.svg)](./LICENSE)
+
 **A reusable foundation for building small, recordable, open-source demos about
 agent governance.** Every demo is middleware over one tiny tool-call
 interception shim, so the second demo costs a fraction of the first and each one
