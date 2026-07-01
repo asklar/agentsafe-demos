@@ -60,7 +60,7 @@ three frameworks.**
 | Roadmap concept | Middleware | Status |
 | --- | --- | --- |
 | A. Guardrail Proxy (policy gate) | `PolicyGate` | flagship demo (SKL-3) |
-| B. Injection Tripwire (taint) | `InjectionTripwire` | demo #2 (SKL-6) |
+| B. Injection Tripwire (taint) | `InjectionTripwire` / `TaintTripwire` | [demo #2](./demos/01-injection-tripwire) (SKL-6) ✅ |
 | C. Agent Flight Recorder (ledger) | `FlightRecorder` + `AuditSink` | demo #3 |
 
 The reference demo [`demos/00-hello-gate`](./demos/00-hello-gate) composes all
@@ -77,7 +77,8 @@ agentlab/
 │   └── toolbox.py        #   shared mock tools
 ├── demos/
 │   ├── _template/        # drop-in scaffold for a new demo
-│   └── 00-hello-gate/    # reference demo that exercises the whole substrate
+│   ├── 00-hello-gate/    # reference demo that exercises the whole substrate
+│   └── 01-injection-tripwire/  # demo #2: block injection-driven exfiltration
 ├── capture/              # one-command demo-capture pipeline
 ├── new_demo.sh           # scaffold a new demo
 ├── run_tests.py          # dependency-free test runner
